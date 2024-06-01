@@ -1,0 +1,14 @@
+---
+# tasks file for archives
+
+
+  - name: create backup directory
+    file:
+      - path: /backup
+        state: directory
+        owner: automation
+        group: automation
+        mode: 644
+
+        
+

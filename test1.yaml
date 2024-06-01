@@ -1,8 +1,0 @@
----
-  - name:  test the disk partitioning
-    hosts: ans-lab
-    roles:
-      - partitions
-
-
-

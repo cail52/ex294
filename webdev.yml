@@ -1,0 +1,5 @@
+---
+  - name: web stuff
+
+    hosts: anslab 
+    roles: sample-apache

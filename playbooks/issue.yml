@@ -1,0 +1,14 @@
+---
+  - name: mod issue file
+    hosts: anslab
+
+    tasks:
+     - name: mod the file
+       copy:
+         content: "Test Text"
+         dest: /etc/issue
+       notify: testhander
+
+    handlers:
+       - name: testhander
+         reboot:

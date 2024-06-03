@@ -1,0 +1,15 @@
+---
+  - name: start the firewall and add ports
+    hosts: anslab
+    vars: 
+      ports:
+       - 4505
+       - 4506
+
+ - name: add ports to firewall
+    firewalld:
+       port: "{{item}}"
+       state: enabled
+       permanent: true
+    loop: "{{fports}}"
+

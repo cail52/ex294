@@ -1,0 +1,7 @@
+---
+# vars file for requirements
+  fports:
+   - 2379/tcp
+   - 2380/tcp
+   - 10000/tcp
+   - 1027/tcp

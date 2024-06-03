@@ -1,0 +1,46 @@
+---
+  - name: rhce question 35
+    hosts: anslab
+    become: true
+
+    tasks:
+
+      - name: create webdev user
+        user:
+          name: webdev
+          group: apache
+          state: absent
+
+      - name: create dir webdev
+        file:
+          path: /webdev
+          group: apache
+          mode: 2755
+          state: directory
+
+
+      - name:  remove httpd
+        yum:
+          name: httpd
+          state: absent
+
+      - name: install apache
+        yum:
+          name: httpd
+          state: absent
+ 
+      - name: enable httpd service
+        service:
+          name: httpd
+          state: started
+
+      - name: create symlink
+        file:
+           src: /web/dev
+           dest: /var/www/html/webdev
+           state: link
+
+      - name:  create the index
+        copy:
+          content: "development"
+          dest: /webdev/index.html

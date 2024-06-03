@@ -1,0 +1,7 @@
+---
+  - name: enable some ports
+    hosts: anslab 
+
+    roles:
+       - requirements
+

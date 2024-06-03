@@ -1,0 +1,9 @@
+---
+ - name: generate the host file
+   hosts: anslab
+
+   tasks:
+     - name: use the template
+       template:
+         src: templates/hosts.j2
+         dest: /etc/myhosts_redo

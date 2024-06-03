@@ -1,0 +1,5 @@
+---
+  - name: web setup
+    hosts: anslab
+    roles:
+      - sample-apache 

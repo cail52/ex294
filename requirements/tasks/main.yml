@@ -1,0 +1,15 @@
+---
+# tasks file for requirements
+  - name: start firewalld
+    service:
+       name: firewalld
+       state: started
+       enabled: true
+
+  - name: add ports to firewall
+    firewalld:
+       port: "{{item}}"
+       state: enabled
+       permanent: true
+    loop: "{{fports}}"
+        

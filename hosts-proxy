@@ -1,0 +1,15 @@
+
+
+
+[proxy]
+ans-lab-4
+ans-lab-5
+
+[ha-proxy]
+ans-lan-1
+
+
+[web]
+ans-lab-2
+ans-lab-3
+

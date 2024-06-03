@@ -1,0 +1,3 @@
+HOST= inventory hostname
+MEMORY= memory
+

@@ -1,0 +1,7 @@
+
+
+{% for host in groups['anslab']%}
+{{hostvars[host]['ansible_default_ipv4']['address']}}  {{hostvars[host]['ansible_fqdn']}}  {{hostvars[host]['ansible_hostname']}}
+{%endfor%}
+
+

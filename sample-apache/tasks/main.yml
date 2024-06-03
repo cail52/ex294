@@ -1,0 +1,33 @@
+---
+  - name: start firewalld
+    service:
+       name: firewalld
+       state: started
+  
+  - name: install http
+    yum:
+       name: httpd
+       state: present
+
+  - name: start httpd
+    service:
+       name: httpd
+       state: started
+
+  - name: add service to firewalld
+    firewalld:
+         service: httpd
+         permanent: yes
+         immediate: yes
+ 
+  - name: apply the index
+    template:
+      src: templates/index.html.j2
+      dest: /var/www/html/index.html
+
+
+
+#    handlers:
+#        service:
+#          name: httpd
+#          state: restarted

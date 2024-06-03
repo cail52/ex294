@@ -1,0 +1,6 @@
+---
+# tasks file for users
+  - name : conditional user creation
+    user:
+      name: "{{item.username}}"
+      group {'

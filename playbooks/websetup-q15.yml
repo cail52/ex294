@@ -1,0 +1,30 @@
+---
+ - name: setup all the web shite
+   hosts: anslab
+
+   tasks:
+     - name: create webdev user
+       user:
+         name: webdev
+         state: present
+
+     - name: create directory
+       file:
+         name: Abcdev
+         state: directory
+         owner: webdev
+         mode: 2755
+     
+     - name: create link
+       file:
+         src: /Abcdev
+         path: /var/www/html/Abcdev
+         state: link
+
+
+     - name: serve content
+       copy:
+         content: "development"
+         dest: /Abcdev/index.html
+ 
+

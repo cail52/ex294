@@ -1,0 +1,7 @@
+---
+   - username: phil
+     job: none 
+   - username: jon
+     job: manager
+   - username: alice
+     job: assistant

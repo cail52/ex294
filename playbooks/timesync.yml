@@ -1,0 +1,9 @@
+---
+- name: use rhel system role to timesync
+  hosts: anslab
+  roles:
+   - rhel-system-roles.timesync 
+  vars:
+   timesync_ntp_servers:
+    - hostname: 0.us.pool.ntp.org
+      iburst: yes 

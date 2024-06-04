@@ -1,0 +1,16 @@
+[anslab]
+ans-lab-1
+ans-lab-2
+ans-lab-3
+ans-lab-4
+ans-lab-5
+
+[proxy]
+ans-lab-1
+ans-lab-5
+
+[prod]
+ans-lab-2
+ans-lab-3
+ans-lab-4
+

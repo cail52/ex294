@@ -44,12 +44,28 @@ ans-lab-4
 ans-lab-5
 
 [proxy]
-
 ans-lab-1
-ans-lab-5
-
-[prod]
-
 ans-lab-2
+
+[frontend]
 ans-lab-3
-ans-lab-4
+ans-lab-5
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+## 
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 10.25.1.56
+## 10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+## db-[99:101]-node.example.com
+
